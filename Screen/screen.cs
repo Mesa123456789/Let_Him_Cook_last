@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Let_Him_Cook_last
+namespace Let_Him_Cook_last.Screen
 {
     public class screen
     {

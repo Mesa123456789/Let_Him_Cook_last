@@ -1,25 +1,31 @@
 ﻿using Let_Him_Cook_last.Screen;
+using Let_Him_Cook_last.Sprite;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGame.Extended;
 using System;
 
 namespace Let_Him_Cook_last
 {
     public class Game1 : Game
     {
-        public static Vector2 WindowSize;
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         public GameplayScreen GameplayScreen;
-        CandyScreen CandyScreen;
+        public CandyScreen CandyScreen;
+        SeaScreen SeaScreen;
         public RestauarntScreen RestauarntScreen;
         public TitleScreen TitleScreen;
         public screen mCurrentScreen;
+        public static Vector2 _bgPosition;
+        Tile_Camera _camera;
+        Player player;
+        public static Vector2 move;
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
-            WindowSize = new(1600, 900);
             _graphics.PreferredBackBufferWidth = 800;
             _graphics.PreferredBackBufferHeight = 450;
             _graphics.ApplyChanges();
@@ -38,14 +44,17 @@ namespace Let_Him_Cook_last
             TitleScreen = new TitleScreen(this, new EventHandler(GameplayScreenEvent));
             RestauarntScreen = new RestauarntScreen(this, new EventHandler(GameplayScreenEvent));
             CandyScreen = new CandyScreen(this, new EventHandler(GameplayScreenEvent));
-            mCurrentScreen = CandyScreen;
+            SeaScreen = new SeaScreen(this, new EventHandler(GameplayScreenEvent));
+            mCurrentScreen = GameplayScreen;
         }
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
            Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-         
+            _camera.UpdateCamera(player.);
+
+
             mCurrentScreen.Update(gameTime);
             base.Update(gameTime);
         }
@@ -61,5 +70,7 @@ namespace Let_Him_Cook_last
         {
             mCurrentScreen = (screen)obj;
         }
+
+        
     }
 }

@@ -14,6 +14,77 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin ../../../../Downloads/InRestaurant_tile-master/InRestaurant_tile-master/InRestaurant_tile/Content/Inrestaurant_Tile.tiled-project
+/importer:
+/processor:
+/build:../../../../Downloads/InRestaurant_tile-master/InRestaurant_tile-master/InRestaurant_tile/Content/Inrestaurant_Tile.tiled-project;Inrestaurant_Tile.tiled-project
+
+#begin ../../../../Downloads/InRestaurant_tile-master/InRestaurant_tile-master/InRestaurant_tile/Content/Inrestaurant_Tile.tiled-project
+/importer:
+/processor:
+/build:../../../../Downloads/InRestaurant_tile-master/InRestaurant_tile-master/InRestaurant_tile/Content/Inrestaurant_Tile.tiled-project;Inrestaurant_Tile.tiled-project
+
+#begin ../../../../Downloads/InRestaurant_tile-master/InRestaurant_tile-master/InRestaurant_tile/Content/Inrestaurant_Tile.tiled-session
+/importer:
+/processor:
+/build:../../../../Downloads/InRestaurant_tile-master/InRestaurant_tile-master/InRestaurant_tile/Content/Inrestaurant_Tile.tiled-session;Inrestaurant_Tile.tiled-session
+
+#begin ../../../../Downloads/InRestaurant_tile-master/InRestaurant_tile-master/InRestaurant_tile/Content/Inrestaurant_Tile.tiled-session
+/importer:
+/processor:
+/build:../../../../Downloads/InRestaurant_tile-master/InRestaurant_tile-master/InRestaurant_tile/Content/Inrestaurant_Tile.tiled-session;Inrestaurant_Tile.tiled-session
+
+#begin ../../../../Downloads/InRestaurant_tile-master/InRestaurant_tile-master/InRestaurant_tile/Content/Inrestaurant.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../Downloads/InRestaurant_tile-master/InRestaurant_tile-master/InRestaurant_tile/Content/Inrestaurant.png;Inrestaurant.png
+
+#begin ../../../../Downloads/InRestaurant_tile-master/InRestaurant_tile-master/InRestaurant_tile/Content/Inrestaurant.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../Downloads/InRestaurant_tile-master/InRestaurant_tile-master/InRestaurant_tile/Content/Inrestaurant.png;Inrestaurant.png
+
+#begin ../../../../Downloads/InRestaurant_tile-master/InRestaurant_tile-master/InRestaurant_tile/Content/Tile_Inrestaurant.tmx
+/importer:TiledMapImporter
+/processor:TiledMapProcessor
+/build:../../../../Downloads/InRestaurant_tile-master/InRestaurant_tile-master/InRestaurant_tile/Content/Tile_Inrestaurant.tmx;Tile_Inrestaurant.tmx
+
+#begin ../../../../Downloads/InRestaurant_tile-master/InRestaurant_tile-master/InRestaurant_tile/Content/Tile_Inrestaurant.tmx
+/importer:TiledMapImporter
+/processor:TiledMapProcessor
+/build:../../../../Downloads/InRestaurant_tile-master/InRestaurant_tile-master/InRestaurant_tile/Content/Tile_Inrestaurant.tmx;Tile_Inrestaurant.tmx
+
+#begin ../../../../Downloads/Sea_Tile-master/Sea_Tile-master/Sea_Tile/Content/Sea_Tile.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../Downloads/Sea_Tile-master/Sea_Tile-master/Sea_Tile/Content/Sea_Tile.png;Sea_Tile.png
+
+#begin ../../../../Downloads/Sea_Tile-master/Sea_Tile-master/Sea_Tile/Content/Sea_Tile.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:../../../../Downloads/Sea_Tile-master/Sea_Tile-master/Sea_Tile/Content/Sea_Tile.tsx;Sea_Tile.tsx
+
 #begin BabiQ.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -233,6 +304,28 @@
 /processorParam:TextureFormat=Color
 /build:In_Restaurant.png
 
+#begin Inrestaurant_Tile.tiled-project
+/importer:
+/processor:
+/build:Inrestaurant_Tile.tiled-project
+
+#begin Inrestaurant_Tile.tiled-session
+/importer:
+/processor:
+/build:Inrestaurant_Tile.tiled-session
+
+#begin Inrestaurant.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Inrestaurant.png
+
 #begin interact.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -423,6 +516,74 @@
 /processorParam:TextureFormat=Color
 /build:tempura.png
 
+#begin Tile _ForntRes_fence.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Tile _ForntRes_fence.png
+
+#begin Tile _ForntRes_fence.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:Tile _ForntRes_fence.tsx
+
+#begin Tile _ForntRes_resterrant.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Tile _ForntRes_resterrant.png
+
+#begin Tile _ForntRes_resterrant.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:Tile _ForntRes_resterrant.tsx
+
+#begin Tile _ForntRes_tile1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Tile _ForntRes_tile1.png
+
+#begin Tile _ForntRes_tile1.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:Tile _ForntRes_tile1.tsx
+
+#begin Tile _ForntRes_tile2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Tile _ForntRes_tile2.png
+
+#begin Tile _ForntRes_tile2.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:Tile _ForntRes_tile2.tsx
+
 #begin Tile_Candy.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -439,6 +600,41 @@
 /importer:TiledMapTilesetImporter
 /processor:TiledMapTilesetProcessor
 /build:Tile_Candy.tsx
+
+#begin Tile_FrontRestaurant.tmx
+/importer:TiledMapImporter
+/processor:TiledMapProcessor
+/build:Tile_FrontRestaurant.tmx
+
+#begin Tile_Inrestaurant.tmx
+/importer:TiledMapImporter
+/processor:TiledMapProcessor
+/build:Tile_Inrestaurant.tmx
+
+#begin tilemap_Candy.tiled-session
+/importer:
+/processor:
+/build:tilemap_Candy.tiled-session
+
+#begin tilemap_FrontRes.tiled-project
+/importer:
+/processor:
+/build:tilemap_FrontRes.tiled-project
+
+#begin tilemap_FrontRes.tiled-session
+/importer:
+/processor:
+/build:tilemap_FrontRes.tiled-session
+
+#begin tilemap_Sea.tiled-project
+/importer:
+/processor:
+/build:tilemap_Sea.tiled-project
+
+#begin tilemap_Sea.tiled-session
+/importer:
+/processor:
+/build:tilemap_Sea.tiled-session
 
 #begin ui.png
 /importer:TextureImporter

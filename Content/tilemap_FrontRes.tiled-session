@@ -1,0 +1,36 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "Tile_Sea.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "Sea_Tile.tsx": {
+            "scaleInDock": 1
+        },
+        "Tile_Sea.tmx": {
+            "scale": 1,
+            "selectedLayer": 7,
+            "viewCenter": {
+                "x": 816.5,
+                "y": 431
+            }
+        }
+    },
+    "last.imagePath": "C:/Users/PC/source/repos/Tile_FrontRes_Sea/Tile_Front_Sea/Content",
+    "map.height": 29,
+    "map.lastUsedFormat": "tmx",
+    "map.width": 50,
+    "openFiles": [
+        "Tile_Sea.tmx"
+    ],
+    "project": "tilemap_FrontRes.tiled-project",
+    "recentFiles": [
+        "Tile_Sea.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx"
+}

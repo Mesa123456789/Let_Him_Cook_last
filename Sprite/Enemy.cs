@@ -2,13 +2,14 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGame.Extended;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Let_Him_Cook_last
+namespace Let_Him_Cook_last.Sprite
 
 {
     public class Enemy : Food
@@ -22,14 +23,14 @@ namespace Let_Him_Cook_last
 
         public Enemy(Texture2D enemytex, Vector2 enemyPosition) : base(enemytex, enemyPosition)
         {
-            this.texture = enemytex;
+            texture = enemytex;
             this.enemyPosition = enemyPosition;
         }
 
-        public override void Update(GameTime gameTime )
+        public override void Update(GameTime gameTime)
         {
             MouseState ms = Mouse.GetState();
-            if (foodBox.Intersects(GameplayScreen.player.playerBox) && !isHit && !OntableAble)
+            if (foodBox.Intersects(GameplayScreen.Bounds) && !isHit && !OntableAble)
             {
                 Hit();
                 if (ms.LeftButton == ButtonState.Pressed)
@@ -49,7 +50,7 @@ namespace Let_Him_Cook_last
                     }
                 }
             }
-            foodBox = new Rectangle((int)foodPosition.X, (int)foodPosition.Y, 50, 50);
+            foodBox = new RectangleF((int)foodPosition.X, (int)foodPosition.Y, 50, 50);
 
         }
 

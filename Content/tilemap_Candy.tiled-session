@@ -1,0 +1,53 @@
+{
+    "activeFile": "Tile_Sea.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "C:/Users/PC/source/repos/Tilemap/Tilemap_Candy/Content/Fountain_Candy.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/PC/source/repos/Tilemap/Tilemap_Candy/Content/Home_Candy.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/PC/source/repos/Tilemap/Tilemap_Candy/Content/Map_Candy.tmx": {
+            "expandedObjectLayers": [
+                10
+            ],
+            "scale": 1.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 441,
+                "y": 632.6666666666666
+            }
+        },
+        "C:/Users/PC/source/repos/Tilemap/Tilemap_Candy/Content/Stairs_Candy.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/PC/source/repos/Tilemap/Tilemap_Candy/Content/Tile_Candy.tsx": {
+            "scaleInDock": 1
+        },
+        "Sea_Tile.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tile_Sea.tmx": {
+            "scale": 1,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 970.5,
+                "y": 519
+            }
+        }
+    },
+    "openFiles": [
+        "Tile_Sea.tmx",
+        "Sea_Tile.tsx"
+    ],
+    "project": "",
+    "recentFiles": [
+        "Sea_Tile.tsx",
+        "Tile_Sea.tmx",
+        "C:/Users/PC/source/repos/Tilemap/Tilemap_Candy/Content/Map_Candy.tmx"
+    ]
+}
