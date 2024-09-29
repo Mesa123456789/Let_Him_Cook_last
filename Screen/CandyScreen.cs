@@ -12,6 +12,8 @@ using MonoGame.Extended.ViewportAdapters;
 using Microsoft.Xna.Framework.Input;
 using MonoGame.Extended.Input;
 using Let_Him_Cook_last.Sprite;
+using MonoGame.Extended.Collections;
+using System.Reflection.Metadata;
 
 
 namespace Let_Him_Cook_last.Screen
@@ -30,18 +32,22 @@ namespace Let_Him_Cook_last.Screen
         public readonly CollisionComponent _collisionComponent;
         //Camera _camera;
         Game1 game;
-        RectangleF Bounds = new RectangleF(new Vector2(200, 250), new Vector2(40, 60));
-
+        RectangleF Bounds = new RectangleF(new Vector2(1500, 400), new Vector2(40, 60)); //new Vector2(1500, 400)
+        public Texture2D book;
+        Texture2D ui;
+        public Texture2D uiHeart;
 
         //Tile_FrontRestaurant Tile_Wall_Frontres
         public CandyScreen(Game1 game, EventHandler theScreenEvent) : base(theScreenEvent)
         {
-            Game1._cameraPosition = new Vector2(400, 200);
+            game._cameraPosition = new Vector2(800, 100);
             popup = game.Content.Load<Texture2D>("popup");
             var viewportadapter = new BoxingViewportAdapter(game.Window, game.GraphicsDevice, 800, 450);
             Game1._camera = new OrthographicCamera(viewportadapter);//******//
-            Game1._bgPosition = new Vector2(400, 225);//******//
-
+            game._bgPosition = new Vector2(400, 225);//******//
+            ui = game.Content.Load<Texture2D>("ui");
+            uiHeart = game.Content.Load<Texture2D>("uiHeart");
+            book = game.Content.Load<Texture2D>("book");
 
             SpriteTexture = new AnimatedTexture(new Vector2(0, 0), 0, 1.0f, 0.5f);
             SpriteTexture.Load(game.Content, "Char01_1", 5, 4, 5);
@@ -80,15 +86,32 @@ namespace Let_Him_Cook_last.Screen
         }
 
         RectangleF doorRec = new RectangleF(200, 100, 100, 100);
+        RectangleF FrontRec = new RectangleF(1500,700, 20, 100);
         RectangleF mouseRec;
+        RectangleF bookRec;
+        bool OnCursor1;
         public override void Update(GameTime theTime)
         {
-            MouseState ms = Mouse.GetState();
 
-            mouseRec = new RectangleF(ms.X, ms.Y, 50, 50);
+
+            if (player.Bounds.Intersects(FrontRec))
+            {
+                ScreenEvent.Invoke(game.GameplayScreen, new EventArgs());
+
+                return;
+            }
+            MouseState ms = Mouse.GetState();
             if (mouseRec.Intersects(doorRec) && ms.LeftButton == ButtonState.Pressed)
             {
-                doorRec.X += 20;
+                //doorRec.X += 20;
+            }
+            for (int i = Game1.foodList.Count - 1; i >= 0; i--)
+            {
+                Game1.foodList[i].Update(theTime);
+            }
+            for (int i = Game1.enemyList.Count - 1; i >= 0; i--)
+            {
+                Game1.enemyList[i].Update(theTime);
             }
             foreach (IEntity entity in _entities)
             {
@@ -96,8 +119,7 @@ namespace Let_Him_Cook_last.Screen
             }
             _collisionComponent.Update(theTime);
             _tiledMapRenderer.Update(theTime);
-
-            Game1._camera.LookAt(Game1._bgPosition + Game1._cameraPosition);//******//
+            Game1._camera.LookAt(game._bgPosition + game._cameraPosition);//******//
             player.Update(theTime);
             base.Update(theTime);
         }
@@ -109,18 +131,20 @@ namespace Let_Him_Cook_last.Screen
             _tiledMapRenderer.Draw(transformMatrix);//******//
             _spriteBatch.End();
             _spriteBatch.Begin(transformMatrix: transformMatrix, samplerState: SamplerState.PointClamp);//******//
-            foreach (IEntity entity in _entities)
-            {
-                entity.Draw(_spriteBatch);
-            }
+            //foreach (IEntity entity in _entities)
+            //{
+            //    entity.Draw(_spriteBatch);
+            //}
+            //_spriteBatch.Draw(popup, new Rectangle(1400, 700, 20, 100), Color.White);
             player.Draw(_spriteBatch);
-            _spriteBatch.End();
+    
 
-            _spriteBatch.Begin();
-            _spriteBatch.Draw(popup, new Rectangle((int)doorRec.X, (int)doorRec.Y, (int)doorRec.Width, (int)doorRec.Height), Color.White);
+
+            //_spriteBatch.Draw(popup, new Rectangle((int)doorRec.X, (int)doorRec.Y, (int)doorRec.Width, (int)doorRec.Height), Color.White);
 
 
         }
+
 
     }
 }

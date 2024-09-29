@@ -38,7 +38,7 @@ namespace Let_Him_Cook_last.Screen
         {
             var viewportadapter = new BoxingViewportAdapter(game.Window, game.GraphicsDevice, 800, 450);
             Game1._camera = new OrthographicCamera(viewportadapter);//******//
-            Game1._bgPosition = new Vector2(400, 225);//******//
+            game._bgPosition = new Vector2(400, 225);//******//
 
 
             SpriteTexture = new AnimatedTexture(new Vector2(0, 0), 0, 1.0f, 0.5f);
@@ -76,8 +76,19 @@ namespace Let_Him_Cook_last.Screen
             }
             this.game = game;
         }
+        /// <summary>
+        ///  RectangleF doorRec = new RectangleF(750, 400, 100, 20);
+        //public override void Update(GameTime gameTime)
+        //{
 
-        RectangleF mouseRec;
+        //    if (player.Bounds.Intersects(doorRec))
+        //    {
+        //        ScreenEvent.Invoke(game.RestauarntScreen, new EventArgs());
+
+        //        return;
+        //    }
+            /// </summary>
+            RectangleF mouseRec;
         public override void Update(GameTime theTime)
         {
             MouseState ms = Mouse.GetState();
@@ -90,7 +101,7 @@ namespace Let_Him_Cook_last.Screen
             _collisionComponent.Update(theTime);
             _tiledMapRenderer.Update(theTime);
 
-            Game1._camera.LookAt(Game1._bgPosition + Game1._cameraPosition);//******//
+            Game1._camera.LookAt(game._bgPosition + game._cameraPosition);//******//
             player.Update(theTime);
             base.Update(theTime);
         }
@@ -107,9 +118,7 @@ namespace Let_Him_Cook_last.Screen
                 entity.Draw(_spriteBatch);
             }
             player.Draw(_spriteBatch);
-            _spriteBatch.End();
-
-            _spriteBatch.Begin();
+  
             
 
 

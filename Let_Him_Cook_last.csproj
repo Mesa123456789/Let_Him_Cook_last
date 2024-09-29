@@ -13,8 +13,115 @@
   <ItemGroup>
     <Compile Remove="Camera.cs" />
     <Compile Remove="ObjectEntity.cs" />
+    <Compile Remove="Tile_Camera.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Content\BabiQ.png" />
+    <None Remove="Content\bag.png" />
+    <None Remove="Content\bin\DesktopGL\Content\BabiQ.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\bag.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\book.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\BookUI.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Char01_1.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\chicken.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\craft.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Dunpling.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\enemy.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\enemy2.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\flower.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Fountain_Candy.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Fountain_Candy_1.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\FridgeUI.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\fruit.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Home_Candy.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Inrestaurant.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\interact.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Inventory.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Map_Candy.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\mushroom1.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\mushroom2.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\popup.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\pumkin.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\pumkin2.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Quest.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\QuestUI.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Sea_Tile.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\snail.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\snail2.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Stairs_Candy.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\tempura.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Tile _ForntRes_fence.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Tile _ForntRes_resterrant.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Tile _ForntRes_tile1.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Tile _ForntRes_tile2.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Tile_Candy.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Tile_FrontRestaurant.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Tile_Inrestaurant.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Tile_Sea.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\ui.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\uiHeart.xnb" />
+    <None Remove="Content\bin\DesktopGL\Content\Uni.xnb" />
+    <None Remove="Content\book.png" />
+    <None Remove="Content\BookUI.png" />
+    <None Remove="Content\Char01_1.png" />
+    <None Remove="Content\chicken.png" />
+    <None Remove="Content\craft.png" />
+    <None Remove="Content\Dunpling.png" />
+    <None Remove="Content\enemy.png" />
+    <None Remove="Content\enemy2.png" />
+    <None Remove="Content\flower.png" />
+    <None Remove="Content\Fountain_Candy.png" />
+    <None Remove="Content\Fountain_Candy.tsx" />
+    <None Remove="Content\Fountain_Candy_1.png" />
+    <None Remove="Content\Fountain_Candy_1.tsx" />
+    <None Remove="Content\FridgeUI.png" />
+    <None Remove="Content\fruit.png" />
+    <None Remove="Content\Home_Candy.png" />
+    <None Remove="Content\Home_Candy.tsx" />
+    <None Remove="Content\Inrestaurant.png" />
+    <None Remove="Content\Inrestaurant_Tile.tiled-project" />
+    <None Remove="Content\Inrestaurant_Tile.tiled-session" />
+    <None Remove="Content\interact.png" />
+    <None Remove="Content\Inventory.png" />
+    <None Remove="Content\In_Restaurant.png" />
+    <None Remove="Content\map.png" />
+    <None Remove="Content\Map_Candy.tmx" />
+    <None Remove="Content\mushroom1.png" />
+    <None Remove="Content\mushroom2.png" />
+    <None Remove="Content\popup.png" />
+    <None Remove="Content\pumkin.png" />
+    <None Remove="Content\pumkin2.png" />
+    <None Remove="Content\Quest.png" />
+    <None Remove="Content\QuestUI.png" />
+    <None Remove="Content\Restauran.png" />
+    <None Remove="Content\Sea_Tile.png" />
+    <None Remove="Content\Sea_Tile.tsx" />
+    <None Remove="Content\snail.png" />
+    <None Remove="Content\snail2.png" />
+    <None Remove="Content\Stairs_Candy.png" />
+    <None Remove="Content\Stairs_Candy.tsx" />
+    <None Remove="Content\tempura.png" />
+    <None Remove="Content\Tile _ForntRes_fence.png" />
+    <None Remove="Content\Tile _ForntRes_fence.tsx" />
+    <None Remove="Content\Tile _ForntRes_resterrant.png" />
+    <None Remove="Content\Tile _ForntRes_resterrant.tsx" />
+    <None Remove="Content\Tile _ForntRes_tile1.png" />
+    <None Remove="Content\Tile _ForntRes_tile1.tsx" />
+    <None Remove="Content\Tile _ForntRes_tile2.png" />
+    <None Remove="Content\Tile _ForntRes_tile2.tsx" />
+    <None Remove="Content\tilemap_Candy.tiled-session" />
+    <None Remove="Content\tilemap_FrontRes.tiled-project" />
+    <None Remove="Content\tilemap_FrontRes.tiled-session" />
+    <None Remove="Content\tilemap_Sea.tiled-project" />
+    <None Remove="Content\tilemap_Sea.tiled-session" />
+    <None Remove="Content\Tile_Candy.png" />
+    <None Remove="Content\Tile_Candy.tsx" />
+    <None Remove="Content\Tile_FrontRestaurant.tmx" />
+    <None Remove="Content\Tile_Inrestaurant.tmx" />
+    <None Remove="Content\Tile_Sea.tmx" />
+    <None Remove="Content\ui.png" />
+    <None Remove="Content\uiHeart.png" />
+    <None Remove="Content\Uni.png" />
     <None Remove="Icon.ico" />
     <None Remove="Icon.bmp" />
   </ItemGroup>
@@ -27,6 +134,9 @@
     <PackageReference Include="MonoGame.Extended.Content.Pipeline" Version="4.0.0" />
     <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303" />
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\bin\DesktopGL\Content\" />
   </ItemGroup>
   <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
     <Message Text="Restoring dotnet tools" Importance="High" />

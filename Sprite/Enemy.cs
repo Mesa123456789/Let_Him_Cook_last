@@ -30,13 +30,12 @@ namespace Let_Him_Cook_last.Sprite
         public override void Update(GameTime gameTime)
         {
             MouseState ms = Mouse.GetState();
-            if (foodBox.Intersects(GameplayScreen.Bounds) && !isHit && !OntableAble)
+            if (foodBox.Intersects(GameplayScreen.player.Bounds) && !isHit && !OntableAble)
             {
                 Hit();
                 if (ms.LeftButton == ButtonState.Pressed)
                 {
                     OnCollision();
-
                 }
             }
             if (isHit == true)
@@ -58,18 +57,18 @@ namespace Let_Him_Cook_last.Sprite
 
         public void Hit()
         {
-            GameplayScreen.currentHeart -= 20;
+            Game1.currentHeart -= 20;
             isHit = true;
 
         }
         public override void OnCollision()
         {
             OntableAble = true;
-            GameplayScreen.BagList.Add(this);
-            GameplayScreen.IsPopUp = true;
-            foreach (Enemy enemy in GameplayScreen.enemyList)
+            Game1.BagList.Add(this);
+            Game1.IsPopUp = true;
+            foreach (Enemy enemy in Game1.enemyList)
             {
-                GameplayScreen.enemyList.Remove(this);
+                Game1.enemyList.Remove(this);
                 break;
             }
         }

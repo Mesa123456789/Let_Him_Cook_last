@@ -22,6 +22,11 @@ namespace Let_Him_Cook_last.Sprite
         public Texture2D foodTexture;
         public int getFood;
         public bool OntableAble;
+        public Player player;
+        Game1 game;
+        public RectangleF Bounds;
+        AnimatedTexture SpriteTexture;
+        Vector2 playerPos;
 
         public Food(Texture2D foodTexture, Vector2 foodPosition)
         {
@@ -29,21 +34,21 @@ namespace Let_Him_Cook_last.Sprite
             this.foodPosition = foodPosition;
             foodBox = new RectangleF((int)foodPosition.X, (int)foodPosition.Y, 50, 50);
             OntableAble = false;
+            player = new Player(SpriteTexture, playerPos, game, Bounds);
 
         }
 
         public override void Update(GameTime gameTime)
         {
             MouseState ms = Mouse.GetState();
-            if (foodBox.Intersects(GameplayScreen.Bounds) && !OntableAble)
+            if (foodBox.Intersects(GameplayScreen.player.Bounds) && !OntableAble)
             {
                 if (ms.LeftButton == ButtonState.Pressed)
                 {
                     OnCollision();
-
                 }
             }
-            foodBox = new Rectangle((int)foodPosition.X, (int)foodPosition.Y, 50, 50);
+            foodBox = new RectangleF((int)foodPosition.X, (int)foodPosition.Y, 50, 50);
         }
 
         public override void Draw(SpriteBatch _spriteBatch)
@@ -53,11 +58,11 @@ namespace Let_Him_Cook_last.Sprite
         public virtual void OnCollision()
         {
             OntableAble = true;
-            GameplayScreen.BagList.Add(this);
-            GameplayScreen.IsPopUp = true;
-            foreach (Food food in GameplayScreen.foodList)
+            Game1.BagList.Add(this);
+            Game1.IsPopUp = true;
+            foreach (Food food in Game1.foodList)
             {
-                GameplayScreen.foodList.Remove(this);
+                Game1.foodList.Remove(this);
                 break;
             }
         }

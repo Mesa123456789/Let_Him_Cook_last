@@ -13,38 +13,11 @@ namespace Let_Him_Cook_last
 {
     public class Tile_Camera
     {
-
-        public static OrthographicCamera _camera;
-        public Vector2 _cameraPosition;
-        public static Vector2 _bgPosition;
-        Game1 game;
-        Player player;
-        public Tile_Camera(Vector2 _cameraPosition)
-        {
-            this._cameraPosition = _cameraPosition;
-            var viewportadapter = new BoxingViewportAdapter(game.Window, game.GraphicsDevice, 800, 450);
-            _camera = new OrthographicCamera(viewportadapter);//******//
-            _bgPosition = new Vector2(400, 225);//******//
-
-        }
-        public void UpdateCamera(Vector2 move)
+        public void UpdateCamera()
         {
             _camera.LookAt(Game1._bgPosition + _cameraPosition);//******//
-            _cameraPosition += move;
-        }
-        
-        public void Draw()
-        {
-            var transformMatrix = _camera.GetViewMatrix();//******//
+            _cameraPosition += player.move;
         }
 
-        public float GetCameraPosX()
-        {
-            return _cameraPosition.X;
-        }
-        public float GetCameraPosY()
-        {
-            return _cameraPosition.Y;
-        }
     }
 }
