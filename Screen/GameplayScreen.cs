@@ -30,9 +30,8 @@ namespace Let_Him_Cook_last.Screen
         TiledMapObjectLayer _platformTiledObj;
         private readonly List<IEntity> _entities = new List<IEntity>();
         public readonly CollisionComponent _collisionComponent;
-        Camera_1 camera_;
         Game1 game;
-        public RectangleF Bounds = new RectangleF(new Vector2(750,440), new Vector2(40, 60));
+        public RectangleF Bounds = new RectangleF(new Vector2(750,440), new Vector2(32, 32));
         Texture2D foodTexture;
         Texture2D foodTex2;
         Texture2D foodTex3;
@@ -75,9 +74,11 @@ namespace Let_Him_Cook_last.Screen
             Game1._camera = new OrthographicCamera(viewportadapter);//******//
             game._bgPosition = new Vector2(400, 225);//******//
 
-            SpriteTexture = new AnimatedTexture(new Vector2(0, 0), 0, 1.0f, 0.5f);
-            SpriteTexture.Load(game.Content, "Char01_1", 5, 4, 5);
+            SpriteTexture = new AnimatedTexture(new Vector2(16, 16), 0, 2f,1f);
+            SpriteTexture.Load(game.Content, "Player-Sheet", 5,4,10);
             player = new Player(SpriteTexture, playerPos, game, Bounds);
+            player.Load(game.Content,"Sword");
+            player.Load(game.Content, "Effect");
             //Load the background texture for the screen
             _collisionComponent = new CollisionComponent(new RectangleF(0, 0, 1600, 900));
             _tiledMap = game.Content.Load<TiledMap>("Tile_FrontRestaurant");

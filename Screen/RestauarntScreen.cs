@@ -42,8 +42,8 @@ namespace Let_Him_Cook_last.Screen
         public RestauarntScreen(Game1 game, EventHandler theScreenEvent) : base(theScreenEvent)
         {
             game._bgPosition = new Vector2(400, 225);//******/
-            SpriteTexture = new AnimatedTexture(new Vector2(0, 0), 0, 1.0f, 0.5f);
-            SpriteTexture.Load(game.Content, "Char01_1", 5, 4, 5);
+            SpriteTexture = new AnimatedTexture(new Vector2(16,16), 0, 2f, 1f);
+            SpriteTexture.Load(game.Content, "Player-Sheet", 5, 4,10);
             player = new Player(SpriteTexture, playerPos, game, Bounds);
             popup = game.Content.Load<Texture2D>("popup");
             interact = game.Content.Load<Texture2D>("interact");
@@ -51,7 +51,8 @@ namespace Let_Him_Cook_last.Screen
             inventory = game.Content.Load<Texture2D>("inventory");
             FridgeUi = game.Content.Load<Texture2D>("FridgeUI");
             QuestUI = game.Content.Load<Texture2D>("QuestUI");
-
+            player.Load(game.Content, "Sword");
+            player.Load(game.Content, "Effect");
             uni = game.Content.Load<Texture2D>("Uni");
 
             //Load the background texture for the screen
@@ -88,7 +89,7 @@ namespace Let_Him_Cook_last.Screen
         }
 
         RectangleF mouseBox;
-       public static RectangleF doorRec = new RectangleF(100,40, 100, 20);
+       public static RectangleF doorRec = new RectangleF(120,40, 200, 20);
         bool IssendMenuInterect = false;
         bool openFridgeUI = false;
         bool IsInterect = false;
@@ -186,10 +187,10 @@ namespace Let_Him_Cook_last.Screen
             _tiledMapRenderer.Draw();//******//
             _spriteBatch.End();
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);//******//
-            //foreach (IEntity entity in _entities)
-            //{
-            //    entity.Draw(_spriteBatch);
-            //}
+            foreach (IEntity entity in _entities)
+            {
+                entity.Draw(_spriteBatch);
+            }
             //_spriteBatch.Draw(popup, new Rectangle((int)doorRec.X, (int)doorRec.Y, (int)doorRec.Width, (int)doorRec.Height), Color.White);
             if (IsInterect == true)
             {

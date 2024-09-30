@@ -11,7 +11,7 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="Camera.cs" />
+    <Compile Remove="Camera_1.cs" />
     <Compile Remove="ObjectEntity.cs" />
     <Compile Remove="Screen\TransitionScreen.cs" />
     <Compile Remove="Tile_Camera.cs" />
@@ -89,6 +89,7 @@
     <None Remove="Content\Map_Candy.tmx" />
     <None Remove="Content\mushroom1.png" />
     <None Remove="Content\mushroom2.png" />
+    <None Remove="Content\Player-Sheet.png" />
     <None Remove="Content\popup.png" />
     <None Remove="Content\pumkin.png" />
     <None Remove="Content\pumkin2.png" />
@@ -97,6 +98,7 @@
     <None Remove="Content\Restauran.png" />
     <None Remove="Content\Sea_Tile.png" />
     <None Remove="Content\Sea_Tile.tsx" />
+    <None Remove="Content\Sea_Tile2.tsx" />
     <None Remove="Content\snail.png" />
     <None Remove="Content\snail2.png" />
     <None Remove="Content\Stairs_Candy.png" />

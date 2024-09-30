@@ -42,9 +42,12 @@ namespace Let_Him_Cook_last.Screen
             game._cameraPosition = new Vector2(440, 0);
 
 
-            SpriteTexture = new AnimatedTexture(new Vector2(0, 0), 0, 1.0f, 0.5f);
-            SpriteTexture.Load(game.Content, "Char01_1", 5, 4, 5);
+            SpriteTexture = new AnimatedTexture(new Vector2(16, 16), 0, 2f, 1f);
+            SpriteTexture.Load(game.Content, "Player-Sheet", 5, 4,10);
             player = new Player(SpriteTexture, playerPos, game, Bounds);
+            player.Load(game.Content, "Sword");
+            player.Load(game.Content, "Effect");
+
             //Load the background texture for the screen
 
             _collisionComponent = new CollisionComponent(new RectangleF(0, 0, 1600, 900));
@@ -117,10 +120,10 @@ namespace Let_Him_Cook_last.Screen
             _tiledMapRenderer.Draw(transformMatrix);//******//
             _spriteBatch.End();
             _spriteBatch.Begin(transformMatrix: transformMatrix, samplerState: SamplerState.PointClamp);//******//
-            foreach (IEntity entity in _entities)
-            {
-                entity.Draw(_spriteBatch);
-            }
+            //foreach (IEntity entity in _entities)
+            //{
+            //    entity.Draw(_spriteBatch);
+            //}
             player.Draw(_spriteBatch);
   
             

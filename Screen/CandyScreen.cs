@@ -49,9 +49,11 @@ namespace Let_Him_Cook_last.Screen
             uiHeart = game.Content.Load<Texture2D>("uiHeart");
             book = game.Content.Load<Texture2D>("book");
 
-            SpriteTexture = new AnimatedTexture(new Vector2(0, 0), 0, 1.0f, 0.5f);
-            SpriteTexture.Load(game.Content, "Char01_1", 5, 4, 5);
+            SpriteTexture = new AnimatedTexture(new Vector2(16,16), 0, 2f, 1f);
+            SpriteTexture.Load(game.Content, "Player-Sheet", 5, 4, 10);
             player = new Player(SpriteTexture, playerPos, game, Bounds);
+            player.Load(game.Content, "Sword");
+            player.Load(game.Content, "Effect");
             //Load the background texture for the screen
 
             _collisionComponent = new CollisionComponent(new RectangleF(0, 0, 1600, 900));
@@ -86,7 +88,7 @@ namespace Let_Him_Cook_last.Screen
         }
 
         RectangleF doorRec = new RectangleF(200, 100, 100, 100);
-        RectangleF FrontRec = new RectangleF(1590, 400, 20, 100);
+        RectangleF FrontRec = new RectangleF(1580, 400, 20, 100);
         RectangleF mouseRec;
         RectangleF bookRec;
         bool OnCursor1;
@@ -98,7 +100,7 @@ namespace Let_Him_Cook_last.Screen
             {
                 ScreenEvent.Invoke(game.GameplayScreen, new EventArgs());
                 game._cameraPosition = new Vector2(0, 200);
-                GameplayScreen.player.Bounds.Position = new Vector2(50, 400);
+                GameplayScreen.player.Bounds.Position = new Vector2(50, 450);
                 GameplayScreen.EnterDoor = true;
                 return;
             }

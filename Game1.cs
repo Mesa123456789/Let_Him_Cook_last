@@ -73,8 +73,8 @@ namespace Let_Him_Cook_last
 
         protected override void LoadContent()
         {
-            SpriteTexture = new AnimatedTexture(new Vector2(0, 0), 0, 1.0f, 0.5f);
-            SpriteTexture.Load(Content, "Char01_1", 5, 4, 5);
+            SpriteTexture = new AnimatedTexture(new Vector2(0, 0), 0, 2f, 1f);
+            SpriteTexture.Load(Content, "PlayerIdel", 5, 4, 5);
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             ui = Content.Load<Texture2D>("ui");
             uiHeart = Content.Load<Texture2D>("uiHeart");
@@ -107,6 +107,7 @@ namespace Let_Him_Cook_last
            Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
             UpDateUI();
+            //player.Update(gameTime);
             mCurrentScreen.Update(gameTime);
             base.Update(gameTime);
         }
@@ -116,7 +117,7 @@ namespace Let_Him_Cook_last
             _spriteBatch.Begin();
             mCurrentScreen.Draw(_spriteBatch);
             _spriteBatch.End();
-            _spriteBatch.Begin();
+            _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
             DrawUiGameplay(_spriteBatch);
             _spriteBatch.End();
 

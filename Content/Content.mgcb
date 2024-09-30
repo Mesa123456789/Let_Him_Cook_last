@@ -19,6 +19,11 @@
 /processor:TiledMapTilesetProcessor
 /build:../../../../Downloads/Sea_Tile-update/Sea_Tile-update/Sea_Tile/Content/Sea_Tile.tsx;Sea_Tile.tsx
 
+#begin ../../../../Downloads/Sea_Tile-update/Sea_Tile-update/Sea_Tile/Content/Sea_Tile2.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:../../../../Downloads/Sea_Tile-update/Sea_Tile-update/Sea_Tile/Content/Sea_Tile2.tsx;Sea_Tile2.tsx
+
 #begin BabiQ.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -114,6 +119,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Dunpling.png
+
+#begin Effect.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Effect.png
 
 #begin enemy.png
 /importer:TextureImporter
@@ -303,6 +320,30 @@
 /processorParam:TextureFormat=Color
 /build:mushroom2.png
 
+#begin Player-Sheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Player-Sheet.png
+
+#begin PlayerIdel.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:PlayerIdel.png
+
 #begin popup.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -437,6 +478,18 @@
 /importer:TiledMapTilesetImporter
 /processor:TiledMapTilesetProcessor
 /build:Stairs_Candy.tsx
+
+#begin Sword.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sword.png
 
 #begin tempura.png
 /importer:TextureImporter
