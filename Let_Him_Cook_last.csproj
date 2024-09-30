@@ -13,6 +13,7 @@
   <ItemGroup>
     <Compile Remove="Camera.cs" />
     <Compile Remove="ObjectEntity.cs" />
+    <Compile Remove="Screen\TransitionScreen.cs" />
     <Compile Remove="Tile_Camera.cs" />
   </ItemGroup>
   <ItemGroup>

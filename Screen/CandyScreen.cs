@@ -86,7 +86,7 @@ namespace Let_Him_Cook_last.Screen
         }
 
         RectangleF doorRec = new RectangleF(200, 100, 100, 100);
-        RectangleF FrontRec = new RectangleF(1500,700, 20, 100);
+        RectangleF FrontRec = new RectangleF(1590, 400, 20, 100);
         RectangleF mouseRec;
         RectangleF bookRec;
         bool OnCursor1;
@@ -94,11 +94,17 @@ namespace Let_Him_Cook_last.Screen
         {
 
 
-            if (player.Bounds.Intersects(FrontRec))
+            if (player.Bounds.Intersects(FrontRec) && !GameplayScreen.EnterDoor)
             {
                 ScreenEvent.Invoke(game.GameplayScreen, new EventArgs());
-
+                game._cameraPosition = new Vector2(0, 200);
+                GameplayScreen.player.Bounds.Position = new Vector2(50, 400);
+                GameplayScreen.EnterDoor = true;
                 return;
+            }
+            if (!player.Bounds.Intersects(FrontRec))
+            {
+                GameplayScreen.EnterDoor = false;
             }
             MouseState ms = Mouse.GetState();
             if (mouseRec.Intersects(doorRec) && ms.LeftButton == ButtonState.Pressed)

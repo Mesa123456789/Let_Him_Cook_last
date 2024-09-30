@@ -19,8 +19,8 @@ namespace Let_Him_Cook_last
         private SpriteBatch _spriteBatch;
         public GameplayScreen GameplayScreen;
         public CandyScreen CandyScreen;
-        SeaScreen SeaScreen;
-        public TransitionScreen TransitionScreen;
+        public SeaScreen SeaScreen;
+
         public RestauarntScreen RestauarntScreen;
         public TitleScreen TitleScreen;
         public screen mCurrentScreen;
@@ -93,7 +93,6 @@ namespace Let_Him_Cook_last
             CandyScreen = new CandyScreen(this, new EventHandler(GameplayScreenEvent));
             SeaScreen = new SeaScreen(this, new EventHandler(GameplayScreenEvent));
             GameplayScreen = new GameplayScreen(this, new EventHandler(GameplayScreenEvent));
-            TransitionScreen = new TransitionScreen(this, new EventHandler(GameplayScreenEvent));
             mCurrentScreen = GameplayScreen;
             currentHeart = CandyScreen.uiHeart.Width - 10;
         }

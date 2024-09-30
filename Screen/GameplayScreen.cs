@@ -107,22 +107,37 @@ namespace Let_Him_Cook_last.Screen
             this.game = game;
         }
         RectangleF doorRec = new RectangleF(750, 400, 100, 20);
-        RectangleF CandyMapRec = new RectangleF(100, 400, 50,100);
+        RectangleF SeaMapRec = new RectangleF(700, 880, 100, 10);
+        RectangleF CandyMapRec = new RectangleF(0, 400, 50, 100);
         RectangleF mouseRec;
+        public static bool EnterDoor = false;
         public override void Update(GameTime theTime)
         {
             MouseState ms = Mouse.GetState();
             mouseRec = new RectangleF(ms.X, ms.Y, 50, 50);
-            if (player.Bounds.Intersects(doorRec))
+            if (!player.Bounds.Intersects(doorRec) && !player.Bounds.Intersects(CandyMapRec) && !player.Bounds.Intersects(SeaMapRec))
             {
+                GameplayScreen.EnterDoor = false;
+            }
+            if (player.Bounds.Intersects(doorRec) && !EnterDoor)
+            {
+                EnterDoor = true;
                 ScreenEvent.Invoke(game.RestauarntScreen, new EventArgs());
-
                 return;
             }
-            if (player.Bounds.Intersects(CandyMapRec))
+            if (player.Bounds.Intersects(CandyMapRec) && !EnterDoor)
             {
+                EnterDoor = true;
                 ScreenEvent.Invoke(game.CandyScreen, new EventArgs());
                 game._cameraPosition = new Vector2(800, 200);
+                return;
+            }
+            if (player.Bounds.Intersects(SeaMapRec) && !EnterDoor)
+            {
+                EnterDoor = true;
+                ScreenEvent.Invoke(game.SeaScreen, new EventArgs());
+                // player.Bounds.Position = new Vector2(780, 64);
+                game._cameraPosition = new Vector2(440, 0);
                 return;
             }
             for (int i = 0; i < Game1.BagList.Count; i++)

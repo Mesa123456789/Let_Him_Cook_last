@@ -14,27 +14,10 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin ../../../../Downloads/Sea_Tile-master/Sea_Tile-master/Sea_Tile/Content/Sea_Tile.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../../../Downloads/Sea_Tile-master/Sea_Tile-master/Sea_Tile/Content/Sea_Tile.png;Sea_Tile.png
-
-#begin ../../../../Downloads/Sea_Tile-master/Sea_Tile-master/Sea_Tile/Content/Sea_Tile.tsx
+#begin ../../../../Downloads/Sea_Tile-update/Sea_Tile-update/Sea_Tile/Content/Sea_Tile.tsx
 /importer:TiledMapTilesetImporter
 /processor:TiledMapTilesetProcessor
-/build:../../../../Downloads/Sea_Tile-master/Sea_Tile-master/Sea_Tile/Content/Sea_Tile.tsx;Sea_Tile.tsx
-
-#begin ../../../../Downloads/Tile_FrontRes_Sea-master/Tile_FrontRes_Sea-master/Tile_Front_Sea/Content/tilemap_Candy.tiled-session
-/importer:
-/processor:
-/build:../../../../Downloads/Tile_FrontRes_Sea-master/Tile_FrontRes_Sea-master/Tile_Front_Sea/Content/tilemap_Candy.tiled-session;tilemap_Candy.tiled-session
+/build:../../../../Downloads/Sea_Tile-update/Sea_Tile-update/Sea_Tile/Content/Sea_Tile.tsx;Sea_Tile.tsx
 
 #begin BabiQ.png
 /importer:TextureImporter
@@ -243,21 +226,6 @@
 /processor:TiledMapTilesetProcessor
 /build:Home_Candy.tsx
 
-#begin Home_Candy.tsx
-/importer:TiledMapTilesetImporter
-/processor:TiledMapTilesetProcessor
-/build:Home_Candy.tsx
-
-#begin Inrestaurant_Tile.tiled-project
-/importer:
-/processor:
-/build:Inrestaurant_Tile.tiled-project
-
-#begin Inrestaurant_Tile.tiled-session
-/importer:
-/processor:
-/build:Inrestaurant_Tile.tiled-session
-
 #begin Inrestaurant.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -269,6 +237,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Inrestaurant.png
+
+#begin interact.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:interact.png
 
 #begin Inventory.png
 /importer:TextureImporter
@@ -399,6 +379,23 @@
 /importer:TiledMapTilesetImporter
 /processor:TiledMapTilesetProcessor
 /build:Sea_Tile.tsx
+
+#begin Sea_Tile2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sea_Tile2.png
+
+#begin Sea_Tile2.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:Sea_Tile2.tsx
 
 #begin snail.png
 /importer:TextureImporter
@@ -552,36 +549,6 @@
 /importer:TiledMapImporter
 /processor:TiledMapProcessor
 /build:Tile_Sea.tmx
-
-#begin tilemap_Candy.tiled-project
-/importer:
-/processor:
-/build:tilemap_Candy.tiled-project
-
-#begin tilemap_Candy.tiled-session
-/importer:
-/processor:
-/build:tilemap_Candy.tiled-session
-
-#begin tilemap_FrontRes.tiled-project
-/importer:
-/processor:
-/build:tilemap_FrontRes.tiled-project
-
-#begin tilemap_FrontRes.tiled-session
-/importer:
-/processor:
-/build:tilemap_FrontRes.tiled-session
-
-#begin tilemap_Sea.tiled-project
-/importer:
-/processor:
-/build:tilemap_Sea.tiled-project
-
-#begin tilemap_Sea.tiled-session
-/importer:
-/processor:
-/build:tilemap_Sea.tiled-session
 
 #begin ui.png
 /importer:TextureImporter

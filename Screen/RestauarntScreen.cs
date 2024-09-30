@@ -97,10 +97,16 @@ namespace Let_Him_Cook_last.Screen
         bool Crafting = false;
         public override void Update(GameTime theTime)
         {
-            if (player.Bounds.Intersects(doorRec))
+            if (player.Bounds.Intersects(doorRec) && !GameplayScreen.EnterDoor)
             {
-                ScreenEvent.Invoke(game.TransitionScreen, new EventArgs());
-                return; 
+                ScreenEvent.Invoke(game.GameplayScreen, new EventArgs());
+                GameplayScreen.player.Bounds.Position = new Vector2(600, 300);
+                GameplayScreen.EnterDoor = true;
+                return;
+            }
+            if (!player.Bounds.Intersects(doorRec))
+            {
+                GameplayScreen.EnterDoor = false;
             }
             MouseState ms = Mouse.GetState();
             mouseBox = new RectangleF(ms.X, ms.Y, 50, 50);

@@ -30,7 +30,7 @@ namespace Let_Him_Cook_last.Screen
         public readonly CollisionComponent _collisionComponent;
         //Camera _camera;
         Game1 game;
-        RectangleF Bounds = new RectangleF(new Vector2(200, 250), new Vector2(40, 60));
+        RectangleF Bounds = new RectangleF(new Vector2(780, 64), new Vector2(40, 60));
 
 
         //Tile_FrontRestaurant Tile_Wall_Frontres
@@ -39,6 +39,7 @@ namespace Let_Him_Cook_last.Screen
             var viewportadapter = new BoxingViewportAdapter(game.Window, game.GraphicsDevice, 800, 450);
             Game1._camera = new OrthographicCamera(viewportadapter);//******//
             game._bgPosition = new Vector2(400, 225);//******//
+            game._cameraPosition = new Vector2(440, 0);
 
 
             SpriteTexture = new AnimatedTexture(new Vector2(0, 0), 0, 1.0f, 0.5f);
@@ -49,13 +50,13 @@ namespace Let_Him_Cook_last.Screen
             _collisionComponent = new CollisionComponent(new RectangleF(0, 0, 1600, 900));
 
 
-            _tiledMap = game.Content.Load<TiledMap>("Map_Candy");
+            _tiledMap = game.Content.Load<TiledMap>("Tile_Sea");
 
             _tiledMapRenderer = new TiledMapRenderer(game.GraphicsDevice, _tiledMap);
             //Get object layers
             foreach (TiledMapObjectLayer layer in _tiledMap.ObjectLayers)
             {
-                if (layer.Name == "Wall")
+                if (layer.Name == "Tile_Wall_Sea")
                 {
                     _platformTiledObj = layer;
                 }
@@ -76,21 +77,24 @@ namespace Let_Him_Cook_last.Screen
             }
             this.game = game;
         }
-        /// <summary>
-        ///  RectangleF doorRec = new RectangleF(750, 400, 100, 20);
-        //public override void Update(GameTime gameTime)
-        //{
 
-        //    if (player.Bounds.Intersects(doorRec))
-        //    {
-        //        ScreenEvent.Invoke(game.RestauarntScreen, new EventArgs());
-
-        //        return;
-        //    }
-            /// </summary>
-            RectangleF mouseRec;
+        RectangleF mouseRec;
+        RectangleF FrontRec;
         public override void Update(GameTime theTime)
         {
+            FrontRec = new RectangleF(740, 0, 100, 10);
+            if (player.Bounds.Intersects(FrontRec) && !GameplayScreen.EnterDoor)
+            {
+                ScreenEvent.Invoke(game.GameplayScreen, new EventArgs());
+                game._cameraPosition = new Vector2(400, 478);
+                GameplayScreen.player.Bounds.Position = new Vector2(765, 880);
+                GameplayScreen.EnterDoor = true;
+                return;
+            }
+            if (!player.Bounds.Intersects(FrontRec))
+            {
+                GameplayScreen.EnterDoor = false;
+            }
             MouseState ms = Mouse.GetState();
 
             mouseRec = new RectangleF(ms.X, ms.Y, 50, 50);
